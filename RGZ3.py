@@ -39,6 +39,7 @@ def findSetsOfCyclicStates(P):
             if P[i, j] != 0:
                 mj = np.append(mj,  j+1)
         q = True
+        if mj not in m:
         for arr in m:
             if arr
         if q:
