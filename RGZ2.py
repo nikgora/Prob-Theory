@@ -2,17 +2,18 @@ import pandas as pd
 
 import numpy as np
 
-P_excel = pd.read_excel("Gora2.xlsx", index_col=0)
+P_excel = pd.read_excel("Gora2.xlsx", header=None)
 P = P_excel.values
 
 
 def is_regular(matrix, max_power=1000):
     power = 1
+    new_matrix = np.copy(matrix)
     while power <= max_power:
-        if np.all(matrix > 0):
+        if np.all(new_matrix > 0):
             return True, power
-        matrix = np.dot(matrix, matrix)
-        power *= 2
+        new_matrix = np.dot(new_matrix, matrix)
+        power += 1
     return False, None
 
 
