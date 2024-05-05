@@ -2,15 +2,13 @@ import numpy as np
 import pandas as pd
 
 # Define the transition matrix
-P_excel = pd.read_excel("Gora3.xlsx", index_col=0)
+P_excel = pd.read_excel("Gora3.xlsx", header=None)
 P = P_excel.values
 
 
 # Define the number of states
 n = P.shape[0]
 
-
-#TODO Fix Reading from exel
 
 
 def findSetsOfCyclicStates(P):
