@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def is_inside_body(x, y, z, bodies):
     for body in bodies:
         (xi, yi, zi, Ai, Bi, Ci, rid) = body
-        num = (x - xi) ** rid / Ai + (y - yi) ** rid / Bi + (z - zi) ** rid / Ci
+        num = ((abs(x - xi) ** rid )/ Ai) + ((abs(y - yi) ** rid) / Bi) +((abs(z - zi) ** rid) / Ci)
         if num.real < 1 or (num.real == 1 and num.imag == 0):
             return True
     return False
@@ -51,11 +51,14 @@ def calculate_volumes_and_errors(bodies, N_values):
 
 
 def plot_results(N_values, volumes, errors):
+    print("N, V, P")
+    for i in range(len(N_values)):
+        print(N_values[i], volumes[i], errors[i], sep=", ")
+
     plt.figure(figsize=(12, 6))
 
     plt.subplot(1, 2, 1)
     plt.plot(N_values, volumes, 'o-', label='Оцененный объем')
-    # plt.axhline(y=246.211, color='r', linestyle='-', label='Точный объем')
     plt.xlabel('Размер выборки (N)')
     plt.ylabel('Объем')
     plt.title('Зависимость вычисленного объема от размера выборки')
@@ -73,17 +76,17 @@ def plot_results(N_values, volumes, errors):
 
 
 if __name__ == "__main__":
-    bodies = [
-        (-1.7, 2.5, 1, 10, 12, 8, 1.9),
-        (0, -1.7, 2.5, 10, 8, 12, 1.5),
-        (10, 2.5, -1.7, 10, 10, 12, 1.7)
-    ]
     # bodies = [
-    #     (-1.7, 2.5, -2.5, 12, 6, 12, 2.5),
-    #     (2.5, 0, 0, 10, 10, 12, 1.9),
-    #     (-1.7, -1.7, -1.7, 6, 12, 12, 1.4)
+    #     (1.7, -2.5, 0, 10, 12, 8, 1.9),
+    #     (0, 1.7, -2.5, 10, 8, 12, 2.5),
+    #     (0, -2.5, 1.7, 10, 10, 12, 3.7)
     # ]
-    N_values = [100, 300, 500, 1000, 2000, 3000, 5000, 8000, 10000]
+    bodies = [
+        (1.7, -2.5, 2.5, 12, 6, 12, 2.5),
+        (-2.5, 0, 0, 10, 10, 12, 1.9),
+        (1.7, 1.7, 1.7, 6, 12, 12, 1.4)
+    ]
+    N_values = [100, 300, 500, 1000, 2000, 3000, 5000, 8000, 10000, 12000, 15000, 20000, 25000]
     volumes, errors = calculate_volumes_and_errors(bodies, N_values)
 
     plot_results(N_values, volumes, errors)
