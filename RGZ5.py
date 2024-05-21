@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+from scipy.stats import norm
 
 def is_inside_body(x, y, z, bodies):
     for body in bodies:
@@ -41,16 +41,23 @@ def monte_carlo_volume(bodies, N):
 def calculate_volumes_and_errors(bodies, N_values):
     volumes = []
     errors = []
+    confidence_intervals = []
     for N in N_values:
-        volume_estimates = [monte_carlo_volume(bodies, N) for _ in range(100)]
+        volume_estimates = [monte_carlo_volume(bodies, N) for _ in range(10)]
         volume_mean = np.mean(volume_estimates)
+        volume_std = np.std(volume_estimates)
         volumes.append(volume_mean)
         errors.append(np.std(volume_estimates))
 
-    return volumes, errors
+        # 95% confidence interval
+        z_score = norm.ppf(0.975)  # Z-score for 95% confidence
+        margin_of_error = z_score * volume_std / np.sqrt(len(volume_estimates))
+        confidence_intervals.append((volume_mean - margin_of_error, volume_mean + margin_of_error))
+
+    return volumes, errors, confidence_intervals
 
 
-def plot_results(N_values, volumes, errors):
+def plot_results(N_values, volumes, errors, confidence_intervals):
     print("N, V, P")
     for i in range(len(N_values)):
         print(N_values[i], volumes[i], errors[i], sep=", ")
@@ -59,6 +66,7 @@ def plot_results(N_values, volumes, errors):
 
     plt.subplot(1, 2, 1)
     plt.plot(N_values, volumes, 'o-', label='Оцененный объем')
+    plt.fill_between(N_values, [ci[0] for ci in confidence_intervals], [ci[1] for ci in confidence_intervals], color='b', alpha=0.2, label='95% доверительный интервал')
     plt.xlabel('Размер выборки (N)')
     plt.ylabel('Объем')
     plt.title('Зависимость вычисленного объема от размера выборки')
@@ -74,7 +82,6 @@ def plot_results(N_values, volumes, errors):
     plt.tight_layout()
     plt.show()
 
-
 if __name__ == "__main__":
     # bodies = [
     #     (1.7, -2.5, 0, 10, 12, 8, 1.9),
@@ -86,8 +93,7 @@ if __name__ == "__main__":
         (-2.5, 0, 0, 10, 10, 12, 1.9),
         (1.7, 1.7, 1.7, 6, 12, 12, 1.4)
     ]
-    N_values = [100, 300, 500, 1000, 2000, 3000, 5000, 8000, 10000, 12000]
-    volumes, errors = calculate_volumes_and_errors(bodies, N_values)
+    N_values = [100, 300, 500, 1000, 2000, 3000, 5000, 8000, 10000, 12000, 15000, 20000, 25000, 30000, 45000, 50000, 55000, 60000, 65000]
+    volumes, errors, confidence_intervals = calculate_volumes_and_errors(bodies, N_values)
 
-    plot_results(N_values, volumes, errors)
-
+    plot_results(N_values, volumes, errors, confidence_intervals)
