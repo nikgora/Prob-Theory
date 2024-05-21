@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 
 def is_inside_body(x, y, z, bodies):
     for body in bodies:
-        (xi, yi, zi, Ai, Bi, Ci, rid) = body
-        num = (x - xi) ** rid / Ai + (y - yi) ** rid / Bi + (z - zi) ** rid / Ci
+        (xi, yi, zi, Ai, Bi, Ci, ri) = body
+        num = ((abs(x - xi) ** ri) / Ai) + ((abs(y - yi) ** ri) / Bi) + ((abs(z - zi) ** ri) / Ci)
         if num.real < 1 or (num.real == 1 and num.imag == 0):
             return True
     return False
@@ -74,9 +74,9 @@ def plot_results(N_values, volumes, errors):
 
 if __name__ == "__main__":
     bodies = [
-        (-1.7, 2.5, 1, 10, 12, 8, 1.9),
-        (0, -1.7, 2.5, 10, 8, 12, 1.5),
-        (10, 2.5, -1.7, 10, 10, 12, 1.7)
+        (1.7, -2.5, 0, 10, 12, 8, 1.9),
+        (0, 1.7, -2.5, 10, 8, 12, 1.5),
+        (0, -2.5, 1.7, 10, 10, 12, 1.7)
     ]
     # bodies = [
     #     (-1.7, 2.5, -2.5, 12, 6, 12, 2.5),
