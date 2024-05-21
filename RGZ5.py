@@ -55,7 +55,7 @@ def plot_results(N_values, volumes, errors):
 
     plt.subplot(1, 2, 1)
     plt.plot(N_values, volumes, 'o-', label='Оцененный объем')
-    plt.axhline(y=246.211, color='r', linestyle='-', label='Точный объем')
+    # plt.axhline(y=246.211, color='r', linestyle='-', label='Точный объем')
     plt.xlabel('Размер выборки (N)')
     plt.ylabel('Объем')
     plt.title('Зависимость вычисленного объема от размера выборки')
@@ -78,7 +78,12 @@ if __name__ == "__main__":
         (0, -1.7, 2.5, 10, 8, 12, 1.5),
         (10, 2.5, -1.7, 10, 10, 12, 1.7)
     ]
-    N_values = [100, 300, 500, 1000, 2000, 3000]
+    # bodies = [
+    #     (-1.7, 2.5, -2.5, 12, 6, 12, 2.5),
+    #     (2.5, 0, 0, 10, 10, 12, 1.9),
+    #     (-1.7, -1.7, -1.7, 6, 12, 12, 1.4)
+    # ]
+    N_values = [100, 300, 500, 1000, 2000, 3000, 5000, 8000, 10000]
     volumes, errors = calculate_volumes_and_errors(bodies, N_values)
 
     plot_results(N_values, volumes, errors)
