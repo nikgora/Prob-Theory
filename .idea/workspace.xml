@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6d702ab-00c0-4beb-bdfb-3ae272c442c4" name="Changes" comment="added RGZ 5">
+    <list default="true" id="d6d702ab-00c0-4beb-bdfb-3ae272c442c4" name="Changes" comment="RGZ 5 Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RGZ5.py" beforeDir="false" afterPath="$PROJECT_DIR$/RGZ5.py" afterDir="false" />
     </list>
@@ -21,6 +21,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -44,23 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.RGZ2.executor": "Debug",
-    "Python.RGZ3.executor": "Debug",
-    "Python.RGZ4.executor": "Run",
-    "Python.RGZ5.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Prob theory/Prob-Theory",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.RGZ2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.RGZ3.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.RGZ4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RGZ5.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Prob theory/Prob-Theory&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Prob theory\Prob-Theory" />
@@ -87,7 +100,7 @@
       <workItem from="1714849664693" duration="5689000" />
       <workItem from="1714906738766" duration="1604000" />
       <workItem from="1715939750447" duration="1716000" />
-      <workItem from="1716288459173" duration="3796000" />
+      <workItem from="1716288459173" duration="2147000" />
     </task>
     <task id="LOCAL-00001" summary="s">
       <option name="closed" value="true" />
@@ -121,15 +134,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716290143595</updated>
     </task>
-    <task id="LOCAL-00005" summary="added RGZ 5">
+    <task id="LOCAL-00005" summary="RGZ 5 Done">
       <option name="closed" value="true" />
-      <created>1716291150726</created>
+      <created>1716318876058</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1716291150726</updated>
+      <updated>1716318876058</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="RGZ 5 Done">
+      <option name="closed" value="true" />
+      <created>1716319205888</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716319205888</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +172,8 @@
     <MESSAGE value="rgz3 Done" />
     <MESSAGE value="added RGZ 4" />
     <MESSAGE value="added RGZ 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="added RGZ 5" />
+    <MESSAGE value="RGZ 5 Done" />
+    <option name="LAST_COMMIT_MESSAGE" value="RGZ 5 Done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -166,20 +188,16 @@
           <line>59</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/RGZ5.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Prob_Theory$RGZ2.coverage" NAME="RGZ2 Coverage Results" MODIFIED="1714909389419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ProbTheory$RGZ3.coverage" NAME="RGZ3 Coverage Results" MODIFIED="1714753902462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ProbTheory$RGZ5.coverage" NAME="RGZ5 Coverage Results" MODIFIED="1716303618971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ProbTheory$RGZ2.coverage" NAME="RGZ2 Coverage Results" MODIFIED="1714749607087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Prob_Theory$RGZ3.coverage" NAME="RGZ3 Coverage Results" MODIFIED="1714907167802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ProbTheory$RGZ4.coverage" NAME="RGZ4 Coverage Results" MODIFIED="1715940337204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Prob_Theory$RGZ2.coverage" NAME="RGZ2 Coverage Results" MODIFIED="1714909389419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProbTheory$RGZ2.coverage" NAME="RGZ2 Coverage Results" MODIFIED="1714749607087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Prob_Theory$RGZ5.coverage" NAME="RGZ5 Coverage Results" MODIFIED="1716319720618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProbTheory$RGZ3.coverage" NAME="RGZ3 Coverage Results" MODIFIED="1714753902462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ProbTheory$RGZ5.coverage" NAME="RGZ5 Coverage Results" MODIFIED="1716290733867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
